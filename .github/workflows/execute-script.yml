@@ -1,5 +1,9 @@
 name: Execute a script
-on: [push]
+on:
+  push:
+    branches:
+      - 'main'
+# on: [push]
 jobs:
   run-script:
     runs-on: ubuntu-latest
