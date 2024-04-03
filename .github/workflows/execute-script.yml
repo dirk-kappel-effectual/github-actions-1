@@ -16,6 +16,8 @@ jobs:
         working-directory: ./scripts
       - name: List the files in the directory
         run: ls -ltr
+      - name: List the files in the scripts directory
+        run: ls ./scripts -ltr
 #       - name: Upload the output file
 #         uses: actions/upload-artifact@v4
         
