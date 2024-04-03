@@ -3,9 +3,9 @@ on: [push]
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./scripts
+    # defaults:
+    #   run:
+    #     working-directory: ./scripts
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4  
@@ -13,8 +13,10 @@ jobs:
     #     run: chmod +x hello-world.sh
       - name: Run the scripts
         run: bash ./hello-world.sh > output.txt
+        working-directory: ./scripts
       - name: Upload the output file
         uses: actions/upload-artifact@v4
+        
         with:
           name: output
           path: output.txt
