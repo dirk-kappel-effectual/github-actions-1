@@ -12,4 +12,4 @@ jobs:
     #   - name: Make the script files executable
     #     run: chmod +x hello-world.sh
       - name: Run the scripts
-        run: ./hello-world.sh
+        run: bash ./hello-world.sh
