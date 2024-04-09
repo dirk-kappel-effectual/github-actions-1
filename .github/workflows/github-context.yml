@@ -5,5 +5,7 @@ jobs:
   github-context:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
+      - name: Ref
         run: echo ${{ github.ref }}
+      - name: Event
+        run: echo ${{ github.event }}
