@@ -1,6 +1,8 @@
 name: Github Context
 run-name: ${{ github.actor }} is gathering github context
-on: 
+on:
+  workflow_dispatch:
+     
   push:
     branches-ignore:
       - 'main'
