@@ -1,6 +1,9 @@
 name: Github Context
 run-name: ${{ github.actor }} is gathering github context
-on: push
+on: 
+  push:
+    branches-ignore:
+      - 'main'
 
 jobs:
   github-context:
