@@ -1,4 +1,5 @@
 name: Github Context
+run-name: ${{ github.actor }} is gathering github context
 on: push
 
 jobs:
