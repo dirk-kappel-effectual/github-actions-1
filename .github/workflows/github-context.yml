@@ -1,9 +1,15 @@
 name: Github Context
-on: push
+run-name: ${{ github.actor }} is gathering github context
+on: 
+  push:
+    branches-ignore:
+      - 'main'
 
 jobs:
   github-context:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: echo ${{ github }}
+      - name: Ref
+        run: echo ${{ github.ref }}
+      - name: Event
+        run: echo ${{ github.event.organization.id }}
