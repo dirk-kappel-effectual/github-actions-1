@@ -10,7 +10,7 @@ on:
       - 'README.md'
       - '.github/**'
 
-jobs:
+jobs-error:
   github-context:
     runs-on: ubuntu-latest
     steps:
