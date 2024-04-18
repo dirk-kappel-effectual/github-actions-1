@@ -10,7 +10,7 @@ on:
       - 'README.md'
       - '.github/**'
 
-jobs-error:
+jobs:
   github-context:
     runs-on: ubuntu-latest
     steps:
@@ -25,3 +25,5 @@ jobs-error:
           echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
           echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
           echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
+      - name: Try to fail
+        run: exit 1
